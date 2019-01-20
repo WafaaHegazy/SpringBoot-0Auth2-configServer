@@ -23,7 +23,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
         http.
                 anonymous().disable()
                 .authorizeRequests()
-                .antMatchers("/users/**","/todo/**").authenticated()
+                .antMatchers("/users/**","/api/**").authenticated()
 				.antMatchers("/oauth/**").permitAll()
                 .and().exceptionHandling().accessDeniedHandler(new OAuth2AccessDeniedHandler());
 	}

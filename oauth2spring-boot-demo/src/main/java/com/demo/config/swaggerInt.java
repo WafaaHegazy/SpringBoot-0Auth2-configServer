@@ -42,7 +42,7 @@ public class swaggerInt {
         return SecurityContext.builder()
                 .securityReferences(
                         Arrays.asList(new SecurityReference("spring_oauth", scopes())))
-                .forPaths(PathSelectors.regex("/todo.*"))
+                .forPaths(PathSelectors.regex("/api.*"))
                 .build();
     }
     private AuthorizationScope[] scopes() {
